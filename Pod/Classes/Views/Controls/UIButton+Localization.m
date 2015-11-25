@@ -79,7 +79,7 @@
             }
         }
         
-        if (self.localizationKeyNormal) {
+        if (self.localizedTitleKey) {
             [self setTitle:LKLocalizedString(self.localizationKeyNormal, nil) forState:UIControlStateNormal];
         }
         if (self.localizationKeySelected) {

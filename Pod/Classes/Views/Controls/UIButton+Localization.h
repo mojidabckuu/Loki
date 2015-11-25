@@ -10,9 +10,10 @@
 
 @interface UIButton (Localization)
 
-@property (strong, nonatomic) IBInspectable NSString *localizationKeyNormal;
-@property (strong, nonatomic) IBInspectable NSString *localizationKeySelected;
-@property (strong, nonatomic) IBInspectable NSString *localizationKeyHightlighted;
-@property (strong, nonatomic) IBInspectable NSString *localizationKeyDisabled;
+@property (nonatomic, strong) NSString *localizedTitleKey;
+
+@property (strong, nonatomic) NSString *localizationKeySelected;
+@property (strong, nonatomic) NSString *localizationKeyHightlighted;
+@property (strong, nonatomic) NSString *localizationKeyDisabled;
 
 @end
