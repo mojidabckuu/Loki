@@ -40,8 +40,6 @@ NSString *LKLocalizedString(NSString *key, NSString *comment) {
     NSUInteger currentLanguageIndex = [manager.languages indexOfObject:manager.currentLanguage];
     currentLanguageIndex = currentLanguageIndex + 1 < manager.languages.count ? currentLanguageIndex + 1 : 0;
     manager.currentLanguage = manager.languages[currentLanguageIndex];
-    
-    NSLog(@"%@", manager.currentLanguage.name);
 }
 
 + (void)setLocalizationFilename:(NSString *)localizationFilename {
@@ -141,6 +139,16 @@ NSString *LKLocalizedString(NSString *key, NSString *comment) {
         languages = [NSMutableArray array];
     });
     return languages;
+}
+
++ (NSMutableArray *)rightToLeftLanguagesCodes {
+    static dispatch_once_t onceToken;
+    static NSMutableArray *items = nil;
+    dispatch_once(&onceToken, ^{
+        items = [NSMutableArray array];
+        [items addObjectsFromArray:@[@"ar", @"hb"]];
+    });
+    return items;
 }
 
 @end

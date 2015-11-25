@@ -7,16 +7,16 @@
 
 #import "LKLanguage.h"
 
+#import "LKManager.h"
+
 @implementation LKLanguage
 
-- (instancetype)initWithName:(NSString*)name code:(NSString*)code{
+- (instancetype)initWithName:(NSString*)name code:(NSString*)code {
     self = [super init];
     if (self) {
         self.name = name;
         self.code = code;
-        
-        NSArray *rtlLanguages = @[@"ar", @"hb"];
-        self.direction = [rtlLanguages containsObject:code] ? NSLocaleLanguageDirectionRightToLeft : NSLocaleLanguageDirectionLeftToRight;
+        self.direction = [[LKManager rightToLeftLanguagesCodes] containsObject:code] ? NSLocaleLanguageDirectionRightToLeft : NSLocaleLanguageDirectionLeftToRight;
     }
     return self;
 }

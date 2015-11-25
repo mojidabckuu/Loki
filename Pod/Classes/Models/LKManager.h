@@ -28,6 +28,7 @@ NSString *LKLocalizedString(NSString *key, NSString *comment);
 - (NSString *)titleForKeyPathIdentifier:(NSString *)keyPathIdentifier;
 
 + (NSMutableArray *)simpleViews;
++ (NSMutableArray *)rightToLeftLanguagesCodes;
 
 + (void)addLanguage:(LKLanguage *)language;
 + (void)removeLanguage:(LKLanguage *)language;
