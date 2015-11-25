@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'loki_Example', :exclusive => true do
+  pod "loki", :path => "../"
+end
+
+target 'loki_Tests', :exclusive => true do
+  pod "loki", :path => "../"
+
+  
+end
