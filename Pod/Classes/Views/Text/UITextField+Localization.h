@@ -10,7 +10,7 @@
 
 @interface UITextField (Localization)
 
-@property (strong, nonatomic) NSString *localizationKeyText;
-@property (strong, nonatomic) NSString *localizationKeyPlaceholder;
+@property (strong, nonatomic) IBInspectable NSString *localizationKeyText;
+@property (strong, nonatomic) IBInspectable NSString *localizationKeyPlaceholder;
 
 @end

@@ -29,7 +29,7 @@
 
 #pragma mark - Localization
 
-- (void)localize{
+- (void)localize {
     if (self.isLocalized) {
         if ([LKManager sharedInstance].currentLanguage.direction != self.controlDirection) {
             self.controlDirection = [LKManager sharedInstance].currentLanguage.direction;
