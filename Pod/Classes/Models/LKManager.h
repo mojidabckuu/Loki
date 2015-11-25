@@ -11,6 +11,9 @@
 
 extern NSString *const LKLanguageDidChangeNotification;
 
+extern NSString *const LKSourceDefault;
+extern NSString *const LKSourcePlist;
+
 NSString *LKLocalizedString(NSString *key, NSString *comment);
 
 @interface LKManager : NSObject{
@@ -32,5 +35,7 @@ NSString *LKLocalizedString(NSString *key, NSString *comment);
 
 + (void)addLanguage:(LKLanguage *)language;
 + (void)removeLanguage:(LKLanguage *)language;
+
+- (NSString *)setLocalizationSource:(NSString *)source;
 
 @end

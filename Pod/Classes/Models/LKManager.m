@@ -14,9 +14,16 @@
 NSString *const LKLanguageDidChangeNotification = @"LKLanguageDidChangeNotification";
 NSString *const LKLanguageKey = @"LKLanguage";
 
+NSString *const LKSourceDefault = @"LKSourceDefault";
+NSString *const LKSourcePlist = @"LKSourcePlist";
+
 NSString *LKLocalizationFilename = @"Localization";
+NSString *LKSource = nil;
 
 NSString *LKLocalizedString(NSString *key, NSString *comment) {
+    if(LKSource == LKSourceDefault) {
+        return NSLocalizedString(key, comment);
+    }
     return [[LKManager sharedInstance] titleForKeyPathIdentifier:key];
 }
 
@@ -64,6 +71,7 @@ NSString *LKLocalizedString(NSString *key, NSString *comment) {
     self = [super init];
     if (self) {
         _vocabluary = [self setupVocabluary];
+        LKSource = LKSourceDefault;
     }
     return self;
 }
@@ -149,6 +157,12 @@ NSString *LKLocalizedString(NSString *key, NSString *comment) {
         [items addObjectsFromArray:@[@"ar", @"hb"]];
     });
     return items;
+}
+
+- (NSString *)setLocalizationSource:(NSString *)source {
+    NSArray *allowedSources = @[LKSourceDefault, LKSourcePlist];
+    NSAssert([allowedSources containsObject:source], @"Passed source parameter that doesn't exist");
+    LKSource = source;
 }
 
 @end
