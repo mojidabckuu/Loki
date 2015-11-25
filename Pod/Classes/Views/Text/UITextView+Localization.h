@@ -10,6 +10,6 @@
 
 @interface UITextView (Localization)
 
-@property (strong, nonatomic) IBInspectable NSString *localizationKey;
+@property (strong, nonatomic) NSString *localizationKey;
 
 @end
