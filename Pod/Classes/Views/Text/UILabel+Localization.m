@@ -22,7 +22,7 @@
 
 - (void)setLocalizationKey:(NSString *)localizationKey {
     objc_setAssociatedObject(self, @selector(localizationKey), localizationKey, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    [self setupLocalizedTitle];
+    [self setupLKLocalizedString];
 }
 
 #pragma mark - Localization
@@ -33,13 +33,13 @@
             self.controlDirection = [LKManager sharedInstance].currentLanguage.direction;
             [self flipAlignment];
         }
-        [self setupLocalizedTitle];
+        [self setupLKLocalizedString];
     }
 }
 
-- (void)setupLocalizedTitle {
+- (void)setupLKLocalizedString {
     if (self.isLocalized && self.localizationKey) {
-        self.text = LocalizedTitle(self.localizationKey);
+        self.text = LKLocalizedString(self.localizationKey, nil);
     }
 }
 

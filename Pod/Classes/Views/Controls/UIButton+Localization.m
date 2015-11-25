@@ -23,7 +23,7 @@
 - (void)setLocalizationKeyDisabled:(NSString *)localizationKeyDisabled {
     objc_setAssociatedObject(self, @selector(localizationKeyDisabled), localizationKeyDisabled, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (localizationKeyDisabled) {
-        [self setTitle:LocalizedTitle(localizationKeyDisabled) forState:UIControlStateDisabled];
+        [self setTitle:LKLocalizedString(localizationKeyDisabled, nil) forState:UIControlStateDisabled];
     }
 }
 
@@ -34,7 +34,7 @@
 - (void)setLocalizationKeyHightlighted:(NSString *)localizationKeyHightlighted {
     objc_setAssociatedObject(self, @selector(localizationKeyHightlighted), localizationKeyHightlighted, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (localizationKeyHightlighted) {
-        [self setTitle:LocalizedTitle(localizationKeyHightlighted) forState:UIControlStateHighlighted];
+        [self setTitle:LKLocalizedString(localizationKeyHightlighted, nil) forState:UIControlStateHighlighted];
     }
 }
 
@@ -45,7 +45,7 @@
 - (void)setLocalizationKeyNormal:(NSString *)localizationKeyNormal {
     objc_setAssociatedObject(self, @selector(localizationKeyNormal), localizationKeyNormal, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (localizationKeyNormal) {
-        [self setTitle:LocalizedTitle(localizationKeyNormal) forState:UIControlStateNormal];
+        [self setTitle:LKLocalizedString(localizationKeyNormal, nil) forState:UIControlStateNormal];
     }
 }
 
@@ -56,7 +56,7 @@
 - (void)setLocalizationKeySelected:(NSString *)localizationKeySelected {
     objc_setAssociatedObject(self, @selector(localizationKeySelected), localizationKeySelected, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (localizationKeySelected) {
-        [self setTitle:LocalizedTitle(localizationKeySelected) forState:UIControlStateSelected];
+        [self setTitle:LKLocalizedString(localizationKeySelected, nil) forState:UIControlStateSelected];
     }
 }
 
@@ -78,16 +78,16 @@
         }
         
         if (self.localizationKeyNormal) {
-            [self setTitle:LocalizedTitle(self.localizationKeyNormal) forState:UIControlStateNormal];
+            [self setTitle:LKLocalizedString(self.localizationKeyNormal, nil) forState:UIControlStateNormal];
         }
         if (self.localizationKeySelected) {
-            [self setTitle:LocalizedTitle(self.localizationKeySelected) forState:UIControlStateSelected];
+            [self setTitle:LKLocalizedString(self.localizationKeySelected, nil) forState:UIControlStateSelected];
         }
         if (self.localizationKeyHightlighted) {
-            [self setTitle:LocalizedTitle(self.localizationKeyHightlighted) forState:UIControlStateHighlighted];
+            [self setTitle:LKLocalizedString(self.localizationKeyHightlighted, nil) forState:UIControlStateHighlighted];
         }
         if (self.localizationKeyDisabled) {
-            [self setTitle:LocalizedTitle(self.localizationKeyDisabled) forState:UIControlStateDisabled];
+            [self setTitle:LKLocalizedString(self.localizationKeyDisabled, nil) forState:UIControlStateDisabled];
         }
     }
 }

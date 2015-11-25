@@ -9,15 +9,20 @@
 
 #import "NSBundle+Language.h"
 
-#define LANGUAGE_DEFAULTS_NAME @"UserPreferedAppLanguage"
-
 NSString *const LKLanguageDidChangeNotification = @"LKLanguageDidChangeNotification";
+NSString *const LKLanguageKey = @"LKLanguage";
+
+NSString *LKLocalizationFilename = @"Localization";
+
+NSString *LKLocalizedString(NSString *key, NSString *comment) {
+    return [[LKManager sharedInstance] titleForKeyPathIdentifier:key];
+}
 
 @implementation LKManager
 
 @synthesize currentLanguage = _currentLanguage;
 
-#pragma - Class Methods
+#pragma - Singleton
 
 + (LKManager*)sharedInstance{
     static LKManager *localizationManager = nil;
@@ -28,7 +33,7 @@ NSString *const LKLanguageDidChangeNotification = @"LKLanguageDidChangeNotificat
     return localizationManager;
 }
 
-+ (void)nextLanguage{
++ (void)nextLanguage {
     LKManager *manager = [LKManager sharedInstance];
     NSUInteger currentLanguageIndex = [manager.languages indexOfObject:manager.currentLanguage];
     currentLanguageIndex = currentLanguageIndex + 1 < manager.languages.count ? currentLanguageIndex + 1 : 0;
@@ -37,52 +42,76 @@ NSString *const LKLanguageDidChangeNotification = @"LKLanguageDidChangeNotificat
     NSLog(@"%@", manager.currentLanguage.name);
 }
 
-#pragma - Inits
++ (void)setLocalizationFilename:(NSString *)localizationFilename {
+    LKLocalizationFilename = localizationFilename;
+}
 
-- (instancetype)init{
++ (void)addLanguage:(LKLanguage *)language {
+    if(![[self languages] containsObject:language]) {
+        [[self languages] addObject:language];
+    }
+}
+
++ (void)removeLanguage:(LKLanguage *)language {
+    if([[self languages] containsObject:language]) {
+        [[self languages] removeObject:language];
+    }
+}
+
+#pragma - Lifecycle
+
+- (instancetype)init {
     self = [super init];
     if (self) {
-        self.languages = [self setupLanguages];
         _vocabluary = [self setupVocabluary];
     }
     return self;
 }
 
-- (NSArray*)setupLanguages{
-    NSMutableArray *languages = [NSMutableArray array];
-    
-    [languages addObject:[[LKLanguage alloc] initWithName:@"Arabic" code:@"ar"]];
-    [languages addObject:[[LKLanguage alloc] initWithName:@"English" code:@"en"]];
-    
-    return languages;
-}
-
-- (NSDictionary*)setupVocabluary{
-    NSString *filePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"Localization" ofType:@"plist"];
+- (NSDictionary*)setupVocabluary {
+    NSString *filePath = [[NSBundle bundleForClass:[self class]] pathForResource:LKLocalizationFilename ofType:@"plist"];
     return [NSDictionary dictionaryWithContentsOfFile:filePath];
 }
 
-#pragma mark - Private Methods
+#pragma mark - Accessors
+
+- (NSArray *)languages {
+    return [[[self class] languages] copy];
+}
 
 - (LKLanguage *)currentLanguage{
     if (!_currentLanguage) {
-        NSString *currentSystemCode = [NSLocale preferredLanguages].firstObject;
-        NSString *currentAppCode = [[NSUserDefaults standardUserDefaults] valueForKey:LANGUAGE_DEFAULTS_NAME];
-        _currentLanguage = [self getLanguageByCode:currentAppCode ? currentAppCode : currentSystemCode];
+        NSString *systemLanguageCode = [NSLocale preferredLanguages].firstObject;
+        NSString *languageCode = [[NSUserDefaults standardUserDefaults] valueForKey:LKLanguageKey];
+        _currentLanguage = [self languageByCode:languageCode ?: systemLanguageCode];
+        NSAssert(_currentLanguage, @"Language doesn't exist");
     }
     return _currentLanguage;
 }
 
+#pragma mark - Modifiers
+
 - (void)setCurrentLanguage:(LKLanguage *)currentLanguage{
-    if (currentLanguage != nil) {
+    if (_currentLanguage != currentLanguage) {
         _currentLanguage = currentLanguage;
         
         [NSBundle setLanguage:currentLanguage.code];
         
-        [[NSUserDefaults standardUserDefaults] setValue:_currentLanguage.code forKey:LANGUAGE_DEFAULTS_NAME];
+        [[NSUserDefaults standardUserDefaults] setValue:_currentLanguage.code forKey:LKLanguageKey];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [[NSNotificationCenter defaultCenter] postNotificationName:LKLanguageDidChangeNotification object:nil];
     }
+}
+
+#pragma mark - Utils
+
+- (LKLanguage*)languageByCode:(NSString*)code{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"code = %@", code];
+    return [self.languages filteredArrayUsingPredicate:predicate].firstObject;
+}
+
+- (NSString *)titleForKeyPathIdentifier:(NSString *)keyPathIdentifier {
+    return [self titleForKeyPathIdentifier:keyPathIdentifier preferredLanguage:self.currentLanguage.code];
 }
 
 - (NSString *)titleForKeyPathIdentifier:(NSString *)keyPathIdentifier preferredLanguage:(NSString *)languageCode{
@@ -93,15 +122,23 @@ NSString *const LKLanguageDidChangeNotification = @"LKLanguageDidChangeNotificat
     }
 }
 
-#pragma mark - Public Methods
-
-- (LKLanguage*)getLanguageByCode:(NSString*)code{
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"code = %@", code];
-    return [self.languages filteredArrayUsingPredicate:predicate].firstObject;
++ (NSMutableArray *)simpleViews {
+    static dispatch_once_t onceToken;
+    static NSMutableArray *items = nil;
+    dispatch_once(&onceToken, ^{
+        items = [NSMutableArray array];
+        [items addObjectsFromArray:@[UIProgressView.class, UISlider.class, UISwitch.class, UIImageView.class]];
+    });
+    return items;
 }
 
-- (NSString *)titleForKeyPathIdentifier:(NSString *)keyPathIdentifier{
-    return [self titleForKeyPathIdentifier:keyPathIdentifier preferredLanguage:self.currentLanguage.code];
++ (NSMutableArray *)languages {
+    static dispatch_once_t onceToken;
+    static NSMutableArray *languages = nil;
+    dispatch_once(&onceToken, ^{
+        languages = [NSMutableArray array];
+    });
+    return languages;
 }
 
 @end

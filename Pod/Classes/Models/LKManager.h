@@ -11,30 +11,35 @@
 
 #import "UIView+Localization.h"
 #import "UIButton+Localization.h"
-#import "UIImageView+Localization.h"
+
 #import "UILabel+Localization.h"
-#import "UIProgressView+Localization.h"
+
 #import "UISegmentedControl+Localization.h"
-#import "UISlider+Localization.h"
-#import "UISwitch+Localization.h"
-#import "UITableViewCell+Localization.h"
+
 #import "UITextField+Localization.h"
 #import "UITextView+Localization.h"
 
 extern NSString *const LKLanguageDidChangeNotification;
-	
-#define LocalizedTitle(keypathIdentifier) [[LKManager sharedInstance] titleForKeyPathIdentifier:keypathIdentifier]
+
+NSString *LKLocalizedString(NSString *key, NSString *comment);
 
 @interface LKManager : NSObject{
     NSDictionary *_vocabluary;
 }
 
-@property (strong, nonatomic) LKLanguage *currentLanguage;
-@property (strong, nonatomic) NSArray *languages;
+@property (nonatomic, strong) LKLanguage *currentLanguage;
+@property (nonatomic, readonly) NSArray *languages;
+
++ (void)setLocalizationFilename:(NSString *)localizationFilename;
 
 + (LKManager*)sharedInstance;
 + (void)nextLanguage;
 
 - (NSString *)titleForKeyPathIdentifier:(NSString *)keyPathIdentifier;
+
++ (NSMutableArray *)simpleViews;
+
++ (void)addLanguage:(LKLanguage *)language;
++ (void)removeLanguage:(LKLanguage *)language;
 
 @end

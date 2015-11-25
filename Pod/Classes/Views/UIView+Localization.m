@@ -57,8 +57,10 @@
         if ([LKManager sharedInstance].currentLanguage.direction != self.controlDirection) {
             self.controlDirection = [LKManager sharedInstance].currentLanguage.direction;
             [self flipView];
-            for (id subview in self.subviews) {
-                [subview flipView];
+            if(![[LKManager simpleViews] containsObject:self.class]) {
+                for (id subview in self.subviews) {
+                    [subview flipView];
+                }
             }
         }
     }

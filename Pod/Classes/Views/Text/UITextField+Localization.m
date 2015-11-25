@@ -24,7 +24,7 @@
 - (void)setLocalizationKeyText:(NSString *)localizationKeyText {
     objc_setAssociatedObject(self, @selector(localizationKeyText), localizationKeyText, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (localizationKeyText) {
-        self.text = LocalizedTitle(localizationKeyText);
+        self.text = LKLocalizedString(localizationKeyText, nil);
     }
 }
 
@@ -35,7 +35,7 @@
 - (void)setLocalizationKeyPlaceholder:(NSString *)localizationKeyPlaceholder {
     objc_setAssociatedObject(self, @selector(localizationKeyPlaceholder), localizationKeyPlaceholder, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (localizationKeyPlaceholder) {
-        self.placeholder = LocalizedTitle(localizationKeyPlaceholder);
+        self.placeholder = LKLocalizedString(localizationKeyPlaceholder, nil);
     }
 }
 
@@ -49,10 +49,10 @@
         }
         
         if (self.localizationKeyText) {
-            self.text = LocalizedTitle(self.localizationKeyText);
+            self.text = LKLocalizedString(self.localizationKeyText, nil);
         }
         if (self.localizationKeyPlaceholder) {
-            self.placeholder = LocalizedTitle(self.localizationKeyPlaceholder);
+            self.placeholder = LKLocalizedString(self.localizationKeyPlaceholder, nil);
         }
     }
 }

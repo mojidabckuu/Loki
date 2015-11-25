@@ -22,7 +22,7 @@
 - (void)setLocalizationKey:(NSString *)localizationKey {
     objc_setAssociatedObject(self, @selector(localizationKey), localizationKey, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (localizationKey) {
-        self.text = LocalizedTitle(localizationKey);
+        self.text = LKLocalizedString(localizationKey, nil);
     }
 }
 
@@ -43,7 +43,7 @@
         }
         
         if (self.localizationKey) {
-            self.text = LocalizedTitle(self.localizationKey);
+            self.text = LKLocalizedString(self.localizationKey, nil);
         }
     }
 }

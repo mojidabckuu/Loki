@@ -64,12 +64,12 @@ static IMP originalSetSelectedIndexImplementation;
             }
             [self removeAllSegments];
             for (NSUInteger i = 0; i < keys.count; i++) {
-                [self insertSegmentWithTitle:LocalizedTitle(keys[i]) atIndex:i animated:NO];
+                [self insertSegmentWithTitle:LKLocalizedString(keys[i], nil) atIndex:i animated:NO];
             }
             [self setSelectedSegmentIndex:selected];
         }else{
             for (NSUInteger i = 0; i < self.numberOfSegments; i++) {
-                [self setTitle:LocalizedTitle(self.localizationKeys[i]) forSegmentAtIndex:i];
+                [self setTitle:LKLocalizedString(self.localizationKeys[i], nil) forSegmentAtIndex:i];
             }
         }
     }
