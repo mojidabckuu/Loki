@@ -7,9 +7,12 @@
 //
 
 #import "UITextView+Localization.h"
-@import ObjectiveC.runtime;
 
 #import "LKManager.h"
+
+#import "UIView+Localization.h"
+
+@import ObjectiveC.runtime;
 
 @implementation UITextView (Localization)
 

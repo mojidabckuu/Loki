@@ -9,6 +9,8 @@
 
 #import "NSBundle+Language.h"
 
+#import "UIView+Localization.h"
+
 NSString *const LKLanguageDidChangeNotification = @"LKLanguageDidChangeNotification";
 NSString *const LKLanguageKey = @"LKLanguage";
 

@@ -10,8 +10,6 @@
 
 @interface UIButton (Localization)
 
-@property (nonatomic) NSLocaleLanguageDirection controlDirection;
-
 @property (strong, nonatomic) IBInspectable NSString *localizationKeyNormal;
 @property (strong, nonatomic) IBInspectable NSString *localizationKeySelected;
 @property (strong, nonatomic) IBInspectable NSString *localizationKeyHightlighted;

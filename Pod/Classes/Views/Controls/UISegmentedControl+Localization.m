@@ -53,7 +53,7 @@ static IMP originalSetSelectedIndexImplementation;
     });
 }
 
-- (void)localize{
+- (void)localize {
     if (self.isLocalized) {
         if ([LKManager sharedInstance].currentLanguage.direction != self.controlDirection) {
             NSInteger selected = self.selectedSegmentIndex;

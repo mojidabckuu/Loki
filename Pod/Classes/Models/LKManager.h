@@ -9,16 +9,6 @@
 
 #import "LKLanguage.h"
 
-#import "UIView+Localization.h"
-#import "UIButton+Localization.h"
-
-#import "UILabel+Localization.h"
-
-#import "UISegmentedControl+Localization.h"
-
-#import "UITextField+Localization.h"
-#import "UITextView+Localization.h"
-
 extern NSString *const LKLanguageDidChangeNotification;
 
 NSString *LKLocalizedString(NSString *key, NSString *comment);

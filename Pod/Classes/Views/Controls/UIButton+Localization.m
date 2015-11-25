@@ -10,6 +10,8 @@
 
 #import "LKManager.h"
 
+#import "UIView+Localization.h"
+
 @import ObjectiveC.runtime;
 
 @implementation UIButton (Localization)

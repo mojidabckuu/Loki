@@ -10,7 +10,9 @@
 
 #import "LKManager.h"
 
-#import <objc/runtime.h>
+#import "UIView+Localization.h"
+
+@import ObjectiveC.runtime;
 
 @implementation UILabel (Localization)
 
