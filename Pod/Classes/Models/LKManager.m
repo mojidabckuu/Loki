@@ -89,7 +89,7 @@ NSString *LKLocalizedString(NSString *key, NSString *comment) {
 
 - (LKLanguage *)currentLanguage{
     if (!_currentLanguage) {
-        NSString *systemLanguageCode = [NSLocale preferredLanguages].firstObject;
+        NSString *systemLanguageCode = [[[NSLocale preferredLanguages].firstObject componentsSeparatedByString:@"-"] firstObject];
         NSString *languageCode = [[NSUserDefaults standardUserDefaults] valueForKey:LKLanguageKey];
         _currentLanguage = [self languageByCode:languageCode ?: systemLanguageCode];
         NSAssert(_currentLanguage, @"Language doesn't exist");
