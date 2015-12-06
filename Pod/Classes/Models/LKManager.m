@@ -93,6 +93,7 @@ NSString *LKLocalizedString(NSString *key, NSString *comment) {
         NSString *languageCode = [[NSUserDefaults standardUserDefaults] valueForKey:LKLanguageKey];
         _currentLanguage = [self languageByCode:languageCode ?: systemLanguageCode];
         NSAssert(_currentLanguage, @"Language doesn't exist");
+        [NSBundle setLanguage:_currentLanguage.code];
     }
     return _currentLanguage;
 }
