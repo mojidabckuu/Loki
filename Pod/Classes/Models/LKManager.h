@@ -36,6 +36,8 @@ NSString *LKLocalizedString(NSString *key, NSString *comment);
 + (void)addLanguage:(LKLanguage *)language;
 + (void)removeLanguage:(LKLanguage *)language;
 
+- (LKLanguage *)languageByCode:(NSString *)code;
+
 - (NSString *)setLocalizationSource:(NSString *)source;
 
 @end
