@@ -10,4 +10,16 @@
 
 @implementation UIViewController (Localization)
 
+#pragma mark - Accessors
+
+- (NSString *)localizedTitle {
+    return self.title;
+}
+
+#pragma mark - Modifiers
+
+- (void)setLocalizedTitle:(NSString *)localizedTitle {
+    self.title = NSLocalizedString(localizedTitle, nil);
+}
+
 @end

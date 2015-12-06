@@ -10,4 +10,6 @@
 
 @interface UIViewController (Localization)
 
+@property (nonatomic, assign) IBInspectable NSString *localizedTitle;
+
 @end
