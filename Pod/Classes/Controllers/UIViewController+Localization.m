@@ -12,14 +12,14 @@
 
 #pragma mark - Accessors
 
-- (NSString *)localizedTitle {
+- (NSString *)localizedTitleKey {
     return self.title;
 }
 
 #pragma mark - Modifiers
 
-- (void)setLocalizedTitle:(NSString *)localizedTitle {
-    self.title = NSLocalizedString(localizedTitle, nil);
+- (void)setLocalizedTitleKey:(NSString *)localizedTitleKey {
+    self.title = NSLocalizedString(localizedTitleKey, nil);
 }
 
 @end
