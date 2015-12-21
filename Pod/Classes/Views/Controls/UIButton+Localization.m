@@ -40,14 +40,14 @@
     }
 }
 
-- (NSString *)localizationKeyNormal {
+- (NSString *)localizedTitleKey {
     return objc_getAssociatedObject(self, @selector(localizationKeyNormal));
 }
 
-- (void)setLocalizationKeyNormal:(NSString *)localizationKeyNormal {
-    objc_setAssociatedObject(self, @selector(localizationKeyNormal), localizationKeyNormal, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    if (localizationKeyNormal) {
-        [self setTitle:LKLocalizedString(localizationKeyNormal, nil) forState:UIControlStateNormal];
+- (void)setLocalizedTitleKey:(NSString *)localizedTitleKey {
+    objc_setAssociatedObject(self, @selector(localizedTitleKey), localizedTitleKey, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    if (localizedTitleKey) {
+        [self setTitle:LKLocalizedString(localizedTitleKey, nil) forState:UIControlStateNormal];
     }
 }
 
@@ -80,7 +80,7 @@
         }
         
         if (self.localizedTitleKey) {
-            [self setTitle:LKLocalizedString(self.localizationKeyNormal, nil) forState:UIControlStateNormal];
+            [self setTitle:LKLocalizedString(self.localizedTitleKey, nil) forState:UIControlStateNormal];
         }
         if (self.localizationKeySelected) {
             [self setTitle:LKLocalizedString(self.localizationKeySelected, nil) forState:UIControlStateSelected];
