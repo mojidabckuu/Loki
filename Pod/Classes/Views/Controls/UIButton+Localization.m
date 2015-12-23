@@ -41,7 +41,7 @@
 }
 
 - (NSString *)localizedTitleKey {
-    return objc_getAssociatedObject(self, @selector(localizationKeyNormal));
+    return objc_getAssociatedObject(self, @selector(localizedTitleKey));
 }
 
 - (void)setLocalizedTitleKey:(NSString *)localizedTitleKey {
@@ -52,7 +52,7 @@
 }
 
 - (NSString *)localizationKeySelected {
-    return objc_getAssociatedObject(self, @selector(localizationKeyNormal));
+    return objc_getAssociatedObject(self, @selector(localizationKeySelected));
 }
 
 - (void)setLocalizationKeySelected:(NSString *)localizationKeySelected {
