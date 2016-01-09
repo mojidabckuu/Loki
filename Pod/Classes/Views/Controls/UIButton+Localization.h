@@ -15,5 +15,6 @@
 @property (strong, nonatomic) IBInspectable NSString *localizationKeySelected;
 @property (strong, nonatomic) IBInspectable NSString *localizationKeyHightlighted;
 @property (strong, nonatomic) IBInspectable NSString *localizationKeyDisabled;
+@property (readwrite, nonatomic) IBInspectable BOOL shouldFlip;
 
 @end

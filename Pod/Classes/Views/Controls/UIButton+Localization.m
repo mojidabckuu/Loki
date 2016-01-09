@@ -62,6 +62,17 @@
     }
 }
 
+- (BOOL)shouldFlip {
+    NSNumber *number = objc_getAssociatedObject(self,@selector(shouldFlip));
+    return [number boolValue];
+}
+
+- (void)setShouldFlip:(BOOL)shouldFlip {
+    NSNumber *number = [NSNumber numberWithBool: shouldFlip];
+    objc_setAssociatedObject(self, @selector(shouldFlip), number, OBJC_ASSOCIATION_RETAIN);
+ 
+}
+
 #pragma mark - Localization
 
 - (void)localize{
@@ -70,6 +81,9 @@
             if ([LKManager sharedInstance].currentLanguage.direction != self.controlDirection) {
                 self.controlDirection = [LKManager sharedInstance].currentLanguage.direction;
                 if (self.imageView.image == nil) {
+                    if (self.shouldFlip) {
+                        [self flipView];
+                    }
                     [self flipAlignment];
                 }else{
                     [self flipView];
