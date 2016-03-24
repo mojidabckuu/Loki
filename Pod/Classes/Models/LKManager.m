@@ -57,11 +57,17 @@ NSString *LKLocalizedString(NSString *key, NSString *comment) {
     if(![[self languages] containsObject:language]) {
         [[self languages] addObject:language];
     }
+    if(![[LKManager sharedInstance] defautlLanguage]) {
+        [[LKManager sharedInstance] setDefautlLanguage:[[self languages] firstObject]];
+    }
 }
 
 + (void)removeLanguage:(LKLanguage *)language {
     if([[self languages] containsObject:language]) {
         [[self languages] removeObject:language];
+    }
+    if([[self languages] count] == 0) {
+        [[LKManager sharedInstance] setDefautlLanguage:nil];
     }
 }
 
@@ -116,7 +122,7 @@ NSString *LKLocalizedString(NSString *key, NSString *comment) {
 
 - (LKLanguage*)languageByCode:(NSString*)code{
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"code = %@", code];
-    return [self.languages filteredArrayUsingPredicate:predicate].firstObject;
+    return [self.languages filteredArrayUsingPredicate:predicate].firstObject ?: self.defautlLanguage;
 }
 
 - (NSString *)titleForKeyPathIdentifier:(NSString *)keyPathIdentifier {
