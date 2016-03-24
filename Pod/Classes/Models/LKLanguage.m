@@ -21,4 +21,12 @@
     return self;
 }
 
+- (instancetype)initWithName:(NSString*)name code:(NSString*)code title:(NSString *)title {
+    self = [self initWithName:name code:code];
+    if (self) {
+        self.title = title;
+    }
+    return self;
+}
+
 @end
