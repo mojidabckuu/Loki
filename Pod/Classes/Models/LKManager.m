@@ -104,6 +104,11 @@ NSString *LKLocalizedString(NSString *key, NSString *comment) {
     return _currentLanguage;
 }
 
+- (LKLanguage *)deviceLanguage {
+    NSString *systemLanguageCode = [[[NSLocale preferredLanguages].firstObject componentsSeparatedByString:@"-"] firstObject];
+    return [self languageByCode:systemLanguageCode];
+}
+
 #pragma mark - Modifiers
 
 - (void)setCurrentLanguage:(LKLanguage *)currentLanguage{
