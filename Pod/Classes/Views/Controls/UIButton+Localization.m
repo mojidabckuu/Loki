@@ -62,31 +62,37 @@
     }
 }
 
-- (BOOL)shouldFlip {
-    NSNumber *number = objc_getAssociatedObject(self,@selector(shouldFlip));
+- (BOOL)shouldNotFlipImage {
+    NSNumber *number = objc_getAssociatedObject(self,@selector(shouldNotFlipImage));
     return [number boolValue];
 }
 
-- (void)setShouldFlip:(BOOL)shouldFlip {
-    NSNumber *number = [NSNumber numberWithBool: shouldFlip];
-    objc_setAssociatedObject(self, @selector(shouldFlip), number, OBJC_ASSOCIATION_RETAIN);
- 
+- (void)setShouldNotFlipImage:(BOOL)shouldNotFlipImage {
+    NSNumber *number = [NSNumber numberWithBool: shouldNotFlipImage];
+    objc_setAssociatedObject(self, @selector(shouldNotFlipImage), number, OBJC_ASSOCIATION_RETAIN);
+    if (self.imageView.image) {
+        self.imageView.transform = CGAffineTransformIdentity;
+    }
+    if (self.controlDirection == NSLocaleLanguageDirectionRightToLeft && shouldNotFlipImage) {
+        [self.imageView flipView];
+    }
 }
 
 #pragma mark - Localization
 
 - (void)localize{
     if (self.isLocalized) {
+        // -999 - Button still be localized, but never flipped
         if (self.tag != -999) {
             if ([LKManager sharedInstance].currentLanguage.direction != self.controlDirection) {
                 self.controlDirection = [LKManager sharedInstance].currentLanguage.direction;
                 if (self.imageView.image == nil) {
-                    if (self.shouldFlip) {
-                        [self flipView];
-                    }
                     [self flipAlignment];
                 }else{
                     [self flipView];
+                    if (self.shouldNotFlipImage) {
+                        [self.imageView flipView];
+                    }
                     [self.titleLabel flipView];
                     [self.titleLabel flipAlignment];
                 }
