@@ -20,6 +20,7 @@ NSString *LKLocalizedString(NSString *key, NSString *comment);
     NSDictionary *_vocabluary;
 }
 
+@property (nonatomic, strong) NSString *source; // From where we take a translation. Default - NSLocalizedString, Plist - Custom Plist file.
 @property (nonatomic, strong) LKLanguage *defautlLanguage; // by default it is first language
 @property (nonatomic, strong) LKLanguage *currentLanguage;
 @property (nonatomic, strong, readonly) LKLanguage *deviceLanguage;
@@ -39,7 +40,5 @@ NSString *LKLocalizedString(NSString *key, NSString *comment);
 + (void)removeLanguage:(LKLanguage *)language;
 
 - (LKLanguage *)languageByCode:(NSString *)code;
-
-- (NSString *)setLocalizationSource:(NSString *)source;
 
 @end
