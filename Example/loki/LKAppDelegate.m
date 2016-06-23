@@ -8,11 +8,16 @@
 
 #import "LKAppDelegate.h"
 
+@import Loki;
+
 @implementation LKAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+
+    [LKManager addLanguage:[[LKLanguage alloc] initWithName:@"English" code:@"en" title:@"English"]];
+    [LKManager addLanguage:[[LKLanguage alloc] initWithName:@"Arabic" code:@"ar" title:@"Arabic"]];
+    
     return YES;
 }
 

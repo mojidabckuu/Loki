@@ -13,8 +13,6 @@
 @interface LKViewController ()
 
 @property (strong, nonatomic) LKLanguage * currentLanguage;
-@property (strong, nonatomic) LKLanguage * english;
-@property (strong, nonatomic) LKLanguage * arabic;
 
 @end
 
@@ -23,12 +21,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.english = [[LKLanguage alloc] initWithName:@"English" code:@"en" title:@"English"];
-    self.arabic = [[LKLanguage alloc] initWithName:@"Ar" code:@"Arabic" title:@"Arabic"];
-    
-    [LKManager addLanguage:self.english];
-    [LKManager addLanguage:self.arabic];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(languageDidChange:) name:LKLanguageDidChangeNotification object:nil];
 }
@@ -48,7 +40,7 @@
 }
 
 - (IBAction)changeLanguage:(id)sender {
-    self.currentLanguage = self.currentLanguage == self.english ? self.arabic : self.english;
+    self.currentLanguage = [[LKManager sharedInstance].currentLanguage.code isEqualToString:@"en"] ? [LKManager sharedInstance].languages.lastObject : [LKManager sharedInstance].languages.firstObject;
 }
 
 @end
