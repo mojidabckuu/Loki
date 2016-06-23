@@ -1,0 +1,14 @@
+PODS:
+  - Loki (0.1.0)
+
+DEPENDENCIES:
+  - Loki (from `../`)
+
+EXTERNAL SOURCES:
+  Loki:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Loki: 1640bd1af9e622c847276d3c5a7c1babbbabdd18
+
+COCOAPODS: 0.39.0

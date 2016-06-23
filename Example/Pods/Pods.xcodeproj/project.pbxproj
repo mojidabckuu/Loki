@@ -1,0 +1,921 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D0C275DB78CA1E61F88740FBC4200AF /* Swizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = B822379F984C9520758B0C8E859218B1 /* Swizzle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F6B36D96474B4C98349D0B9E1EE7ED2 /* LKLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 53868540B83E8B6F7C57CA493C73F8B2 /* LKLanguage.m */; };
+		11A5F24424E74E772C6EF293FF2E7940 /* UIBarButtonItem+Localization.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B6414E1703A6C4AF1C2E33BF5296068 /* UIBarButtonItem+Localization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17B0E1F8CE6710343B1CDA3CD2A6D5FC /* Pods-loki_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 24D0159DD41EC016A969E3F94C807556 /* Pods-loki_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24F817BFBD5DBFA06592D7CAF6EFEE68 /* UITextField+Localization.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B12DCEA645BA8F1E0167BE84977226 /* UITextField+Localization.m */; };
+		281E07748719E84DCD579F2632CDEE33 /* UISegmentedControl+Localization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEFD6484E824C081EAC5F9CFB0239CB /* UISegmentedControl+Localization.m */; };
+		286D78F08126F56A16BD824907CB3871 /* UIView+Localization.h in Headers */ = {isa = PBXBuildFile; fileRef = 7755BB8D7F831C0EE795E0E1713ED467 /* UIView+Localization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FD8B5D38435970B76F4F65E25BB5483 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		2FE77B25AAA0F40BFFCE35B14C8F901A /* Loki.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D2CB761AE51F7D09B1D4122086D1EE9C /* Loki.bundle */; };
+		316BA7856B10823C7123BCA3A0874B07 /* UIViewController+Localization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3570F1AC1F5B1BBACE0933FB050FD994 /* UIViewController+Localization.m */; };
+		412A408152C82482912A035B49EEB282 /* UIButton+Localization.h in Headers */ = {isa = PBXBuildFile; fileRef = C94EF299D24AB9BD4F748DFFD4696F1E /* UIButton+Localization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4681D007606D647DC5B8F0D2E47915DF /* UISegmentedControl+Localization.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FF7627B8D66E40BF6D64ED2BCFD2950 /* UISegmentedControl+Localization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E4F8069B0DC64DC2DD9A222E3FD9304 /* Pods-loki_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E82FA97B7BD559119B70945869E71 /* Pods-loki_Example-dummy.m */; };
+		53F337CA96671607BC5E8E1ADBBF5A89 /* LKManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B9DEB24F127D0576CD45F150688DDC /* LKManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B434D6D8CAF26C9F3E7E8691455C8B8 /* UITextView+Localization.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0130837F58668032CA646D5AB4472F /* UITextView+Localization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D4C4926D7E452160DAA090BFF9DBAF7 /* Loki-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F63AB6595F8EB4108E6D0C412BE454 /* Loki-dummy.m */; };
+		6390748D64B6D96AE68C4AA9181596EE /* UILabel+Localization.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BE36C06D5E71C55B45A31BD04BBA8A /* UILabel+Localization.m */; };
+		679173EA00BED84A3609682A7FE254CD /* UIBarButtonItem+Localization.m in Sources */ = {isa = PBXBuildFile; fileRef = A21673F02B005E46790BCAF9F77E2960 /* UIBarButtonItem+Localization.m */; };
+		72FB63259B2D134A6C25BB99147EF5F3 /* Loki-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8978C33E574B81BBFCC3D113533694AD /* Loki-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73C5B13891D99E35FC76D69FE059AD6D /* LKLanguage.h in Headers */ = {isa = PBXBuildFile; fileRef = CB4EC74831D7C6361CC3C4A437DDB705 /* LKLanguage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		761C67497281E3749D73A0C81052B34F /* UIView+Localization.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C0028A4AFE7E8C6C0BF0B9EF2ED8A /* UIView+Localization.m */; };
+		81C5D95F49F72E3611C23D2591E208F3 /* UILabel+Localization.h in Headers */ = {isa = PBXBuildFile; fileRef = 8289C17AB006D8AF4B986B639148A600 /* UILabel+Localization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82F9F84D118858BB4A5336920722652F /* UIButton+Localization.m in Sources */ = {isa = PBXBuildFile; fileRef = B853A919803A581ED331168EFB05DF68 /* UIButton+Localization.m */; };
+		85E1042B6CD0231D78788E057A57BB30 /* UIViewController+Localization.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EE0618AB0180FC2466A4BA12BF2D94C /* UIViewController+Localization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89769D9D41322FF3EBA145575226C56A /* Pods-loki_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7775C2D23C5F955FF077417DB7617B6D /* Pods-loki_Tests-dummy.m */; };
+		8B6D257E37A6642D3B5CE68CF121187B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		99B794E914417DA1084B5282D1EB402B /* UITextView+Localization.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A176B957F4B42DCC18B58E43008B678 /* UITextView+Localization.m */; };
+		9DFC3E5CE19389F9B569C32E66411F84 /* NSBundle+Language.h in Headers */ = {isa = PBXBuildFile; fileRef = 982F8BFA7981980EB0083E1A0F3A2DD5 /* NSBundle+Language.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8A7529E2B3D84D65FBB49648798F0E5 /* Loki.h in Headers */ = {isa = PBXBuildFile; fileRef = 61150DB6976747AEB7992C53F4DE543F /* Loki.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD3D9116EB6AA949FCB0D1CFA19BEA5A /* NSBundle+Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B429D9BB86A8114C051FD5A200FF615 /* NSBundle+Language.m */; };
+		D205132DC06AA02A55A1462705430F0C /* LKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F71B00B80F2DA559D26A77C783B02D /* LKManager.m */; };
+		EA2A937F3FCB4B6395F1108234C45ECE /* UITextField+Localization.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF669C48D5670B8E38D784EB72DBBBA /* UITextField+Localization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE610815360E1A03D80B1DC227F73C5E /* Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7982362EFFE022B88D667296FC33A759 /* Swizzle.m */; };
+		F813D687E26F9D9BF756904425AD5540 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		FDFCE4E00CC956F782C5FDF078C74264 /* Pods-loki_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0759E3B6C6CCEBD7F418698D7AE19ABE /* Pods-loki_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F3A5A39DEB11DA3D0E36BE08753ED29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFFA9BBFAA540D6119E048D38EEE66AF;
+			remoteInfo = "Loki-Loki";
+		};
+		D08812D91130678BAAC0D4AA5D1B9A83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74F450A91EC53247473696CA962E9280;
+			remoteInfo = Loki;
+		};
+		E7438444F8B61363041AD33E7EA3A6B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74F450A91EC53247473696CA962E9280;
+			remoteInfo = Loki;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03BE36C06D5E71C55B45A31BD04BBA8A /* UILabel+Localization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Localization.m"; sourceTree = "<group>"; };
+		059A2E5D1C5290B8A0E7479777099236 /* Loki.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Loki.modulemap; sourceTree = "<group>"; };
+		0759E3B6C6CCEBD7F418698D7AE19ABE /* Pods-loki_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loki_Example-umbrella.h"; sourceTree = "<group>"; };
+		0A82BC9A792F798AA9D1E943AF92B010 /* Pods-loki_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loki_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		0D4E82FA97B7BD559119B70945869E71 /* Pods-loki_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-loki_Example-dummy.m"; sourceTree = "<group>"; };
+		0E28DE0B37896CF8D026A32015584DAD /* Pods-loki_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-loki_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		109FD4D66BCA1E9B8A13CB8153B363EA /* Pods-loki_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-loki_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		1B31FA465F1DC925AE594A9019F9ACF2 /* Loki-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Loki-prefix.pch"; sourceTree = "<group>"; };
+		1EE0618AB0180FC2466A4BA12BF2D94C /* UIViewController+Localization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Localization.h"; sourceTree = "<group>"; };
+		1FEE3AA5119C8805BD87FB401F62FFCA /* Pods-loki_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-loki_Example-frameworks.sh"; sourceTree = "<group>"; };
+		24D0159DD41EC016A969E3F94C807556 /* Pods-loki_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loki_Tests-umbrella.h"; sourceTree = "<group>"; };
+		25F71B00B80F2DA559D26A77C783B02D /* LKManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LKManager.m; sourceTree = "<group>"; };
+		29821115667CC2EF1928351837BF25D1 /* Pods-loki_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loki_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		32B9DEB24F127D0576CD45F150688DDC /* LKManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LKManager.h; sourceTree = "<group>"; };
+		3570F1AC1F5B1BBACE0933FB050FD994 /* UIViewController+Localization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Localization.m"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4B429D9BB86A8114C051FD5A200FF615 /* NSBundle+Language.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Language.m"; sourceTree = "<group>"; };
+		4C07E2D154B98429E2B12729A34E7ECB /* Pods-loki_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-loki_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4DB42F13104EC94523D6B97F58FAD7B6 /* Pods-loki_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-loki_Example.modulemap"; sourceTree = "<group>"; };
+		4F77A4C2387C6719FFFD549189861BB0 /* Pods_loki_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_loki_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53868540B83E8B6F7C57CA493C73F8B2 /* LKLanguage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LKLanguage.m; sourceTree = "<group>"; };
+		568007E84817319DA6CB8A4D87FF4075 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A6C78485826DF83C11200BBCD1399D9 /* Pods-loki_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-loki_Tests-resources.sh"; sourceTree = "<group>"; };
+		5AF669C48D5670B8E38D784EB72DBBBA /* UITextField+Localization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField+Localization.h"; sourceTree = "<group>"; };
+		5B6414E1703A6C4AF1C2E33BF5296068 /* UIBarButtonItem+Localization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Localization.h"; sourceTree = "<group>"; };
+		61150DB6976747AEB7992C53F4DE543F /* Loki.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Loki.h; sourceTree = "<group>"; };
+		67B4C6FE45C543B7772B84DF0D324022 /* Pods-loki_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-loki_Tests.modulemap"; sourceTree = "<group>"; };
+		6A176B957F4B42DCC18B58E43008B678 /* UITextView+Localization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Localization.m"; sourceTree = "<group>"; };
+		7755BB8D7F831C0EE795E0E1713ED467 /* UIView+Localization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+Localization.h"; sourceTree = "<group>"; };
+		7775C2D23C5F955FF077417DB7617B6D /* Pods-loki_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-loki_Tests-dummy.m"; sourceTree = "<group>"; };
+		78360DCC9C055AD692292CEC6745BFF0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7982362EFFE022B88D667296FC33A759 /* Swizzle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Swizzle.m; sourceTree = "<group>"; };
+		8289C17AB006D8AF4B986B639148A600 /* UILabel+Localization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UILabel+Localization.h"; sourceTree = "<group>"; };
+		84DAD99F4E5D90AC8E68EBCDF711C2B4 /* Loki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Loki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86F63AB6595F8EB4108E6D0C412BE454 /* Loki-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Loki-dummy.m"; sourceTree = "<group>"; };
+		8978C33E574B81BBFCC3D113533694AD /* Loki-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Loki-umbrella.h"; sourceTree = "<group>"; };
+		8FF7627B8D66E40BF6D64ED2BCFD2950 /* UISegmentedControl+Localization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+Localization.h"; sourceTree = "<group>"; };
+		95839A5933501D43A349FADF02B75950 /* Loki.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Loki.xcconfig; sourceTree = "<group>"; };
+		959CA46D6296A0467E938C9A5F5B0451 /* Pods-loki_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-loki_Example-resources.sh"; sourceTree = "<group>"; };
+		982F8BFA7981980EB0083E1A0F3A2DD5 /* NSBundle+Language.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Language.h"; sourceTree = "<group>"; };
+		99B12DCEA645BA8F1E0167BE84977226 /* UITextField+Localization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Localization.m"; sourceTree = "<group>"; };
+		9A0BC0A2F66EA74155FF008FB6A58234 /* Pods-loki_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loki_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		9EEFD6484E824C081EAC5F9CFB0239CB /* UISegmentedControl+Localization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+Localization.m"; sourceTree = "<group>"; };
+		A19180DAC29D405A773D937B3C3654A8 /* Pods-loki_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loki_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A21673F02B005E46790BCAF9F77E2960 /* UIBarButtonItem+Localization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Localization.m"; sourceTree = "<group>"; };
+		A7F1472ACA3F459E0E1673C78041D43D /* Pods-loki_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-loki_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AA0130837F58668032CA646D5AB4472F /* UITextView+Localization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextView+Localization.h"; sourceTree = "<group>"; };
+		B6413515D9BA38855BC581762865EB6A /* Pods-loki_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-loki_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B822379F984C9520758B0C8E859218B1 /* Swizzle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Swizzle.h; sourceTree = "<group>"; };
+		B853A919803A581ED331168EFB05DF68 /* UIButton+Localization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Localization.m"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BD0C0028A4AFE7E8C6C0BF0B9EF2ED8A /* UIView+Localization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+Localization.m"; sourceTree = "<group>"; };
+		C8A76851BF49BCA0687F14C59231459F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C94EF299D24AB9BD4F748DFFD4696F1E /* UIButton+Localization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton+Localization.h"; sourceTree = "<group>"; };
+		CB4EC74831D7C6361CC3C4A437DDB705 /* LKLanguage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LKLanguage.h; sourceTree = "<group>"; };
+		D2CB761AE51F7D09B1D4122086D1EE9C /* Loki.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Loki.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA4B7B17B31DA458768D35758CCA991A /* Pods_loki_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_loki_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		366986A11AEAF9A2A6FC84E533450416 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F813D687E26F9D9BF756904425AD5540 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E39BDCE39CC992A51A37DD557A4CB6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FD8B5D38435970B76F4F65E25BB5483 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		635024394519FBC247E54B0FC79963EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B6D257E37A6642D3B5CE68CF121187B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		665F1A6295B29696E4D2C0A1D04692EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03CBF1A73D7F69767C7786E25F8ACF3F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1EE0618AB0180FC2466A4BA12BF2D94C /* UIViewController+Localization.h */,
+				3570F1AC1F5B1BBACE0933FB050FD994 /* UIViewController+Localization.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0A951A82312422FEA20E62A0D885308A /* Pods-loki_Example */ = {
+			isa = PBXGroup;
+			children = (
+				568007E84817319DA6CB8A4D87FF4075 /* Info.plist */,
+				4DB42F13104EC94523D6B97F58FAD7B6 /* Pods-loki_Example.modulemap */,
+				4C07E2D154B98429E2B12729A34E7ECB /* Pods-loki_Example-acknowledgements.markdown */,
+				109FD4D66BCA1E9B8A13CB8153B363EA /* Pods-loki_Example-acknowledgements.plist */,
+				0D4E82FA97B7BD559119B70945869E71 /* Pods-loki_Example-dummy.m */,
+				1FEE3AA5119C8805BD87FB401F62FFCA /* Pods-loki_Example-frameworks.sh */,
+				959CA46D6296A0467E938C9A5F5B0451 /* Pods-loki_Example-resources.sh */,
+				0759E3B6C6CCEBD7F418698D7AE19ABE /* Pods-loki_Example-umbrella.h */,
+				0A82BC9A792F798AA9D1E943AF92B010 /* Pods-loki_Example.debug.xcconfig */,
+				A19180DAC29D405A773D937B3C3654A8 /* Pods-loki_Example.release.xcconfig */,
+			);
+			name = "Pods-loki_Example";
+			path = "Target Support Files/Pods-loki_Example";
+			sourceTree = "<group>";
+		};
+		2C31794DCB2E42F1058649742444E3BB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				61150DB6976747AEB7992C53F4DE543F /* Loki.h */,
+				03CBF1A73D7F69767C7786E25F8ACF3F /* Controllers */,
+				BEAB7E93766DAFEE1C7B1A53FA558C75 /* Models */,
+				C6F3A54E071FF8019AFB43ADC9319EFD /* Utils */,
+				994B3C3F05E1836CF1BEE78858BDAE9E /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		37EB7B806DC03A44EA8A2444AAEDF10C /* Pods-loki_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				78360DCC9C055AD692292CEC6745BFF0 /* Info.plist */,
+				67B4C6FE45C543B7772B84DF0D324022 /* Pods-loki_Tests.modulemap */,
+				A7F1472ACA3F459E0E1673C78041D43D /* Pods-loki_Tests-acknowledgements.markdown */,
+				B6413515D9BA38855BC581762865EB6A /* Pods-loki_Tests-acknowledgements.plist */,
+				7775C2D23C5F955FF077417DB7617B6D /* Pods-loki_Tests-dummy.m */,
+				0E28DE0B37896CF8D026A32015584DAD /* Pods-loki_Tests-frameworks.sh */,
+				5A6C78485826DF83C11200BBCD1399D9 /* Pods-loki_Tests-resources.sh */,
+				24D0159DD41EC016A969E3F94C807556 /* Pods-loki_Tests-umbrella.h */,
+				29821115667CC2EF1928351837BF25D1 /* Pods-loki_Tests.debug.xcconfig */,
+				9A0BC0A2F66EA74155FF008FB6A58234 /* Pods-loki_Tests.release.xcconfig */,
+			);
+			name = "Pods-loki_Tests";
+			path = "Target Support Files/Pods-loki_Tests";
+			sourceTree = "<group>";
+		};
+		5F1EEA882055903A2C11E5B537C023C6 /* Loki */ = {
+			isa = PBXGroup;
+			children = (
+				E0D9782059D0EBE0F6C87BACD1090759 /* Pod */,
+				CEF647C523C8528E85A8E1D12FC1C1D7 /* Support Files */,
+			);
+			name = Loki;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				9A72B447603F3AA1CEAEE83A18FD3E23 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				928F37E433E77E3C90608C106AD1D777 /* Products */,
+				AF464CCAD20B8FE4908CACE315DF2D48 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		928F37E433E77E3C90608C106AD1D777 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2CB761AE51F7D09B1D4122086D1EE9C /* Loki.bundle */,
+				84DAD99F4E5D90AC8E68EBCDF711C2B4 /* Loki.framework */,
+				DA4B7B17B31DA458768D35758CCA991A /* Pods_loki_Example.framework */,
+				4F77A4C2387C6719FFFD549189861BB0 /* Pods_loki_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		994B3C3F05E1836CF1BEE78858BDAE9E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7755BB8D7F831C0EE795E0E1713ED467 /* UIView+Localization.h */,
+				BD0C0028A4AFE7E8C6C0BF0B9EF2ED8A /* UIView+Localization.m */,
+				F2AB5F8E55C96D9C3422EE4DCEA213E5 /* Controls */,
+				E937C9E9D02FF3B8BB96EA0A3E8B2866 /* Text */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9A72B447603F3AA1CEAEE83A18FD3E23 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F1EEA882055903A2C11E5B537C023C6 /* Loki */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		AF464CCAD20B8FE4908CACE315DF2D48 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A951A82312422FEA20E62A0D885308A /* Pods-loki_Example */,
+				37EB7B806DC03A44EA8A2444AAEDF10C /* Pods-loki_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEAB7E93766DAFEE1C7B1A53FA558C75 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB4EC74831D7C6361CC3C4A437DDB705 /* LKLanguage.h */,
+				53868540B83E8B6F7C57CA493C73F8B2 /* LKLanguage.m */,
+				32B9DEB24F127D0576CD45F150688DDC /* LKManager.h */,
+				25F71B00B80F2DA559D26A77C783B02D /* LKManager.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C6F3A54E071FF8019AFB43ADC9319EFD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				982F8BFA7981980EB0083E1A0F3A2DD5 /* NSBundle+Language.h */,
+				4B429D9BB86A8114C051FD5A200FF615 /* NSBundle+Language.m */,
+				B822379F984C9520758B0C8E859218B1 /* Swizzle.h */,
+				7982362EFFE022B88D667296FC33A759 /* Swizzle.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CEF647C523C8528E85A8E1D12FC1C1D7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C8A76851BF49BCA0687F14C59231459F /* Info.plist */,
+				059A2E5D1C5290B8A0E7479777099236 /* Loki.modulemap */,
+				95839A5933501D43A349FADF02B75950 /* Loki.xcconfig */,
+				86F63AB6595F8EB4108E6D0C412BE454 /* Loki-dummy.m */,
+				1B31FA465F1DC925AE594A9019F9ACF2 /* Loki-prefix.pch */,
+				8978C33E574B81BBFCC3D113533694AD /* Loki-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Loki";
+			sourceTree = "<group>";
+		};
+		E0D9782059D0EBE0F6C87BACD1090759 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				2C31794DCB2E42F1058649742444E3BB /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		E937C9E9D02FF3B8BB96EA0A3E8B2866 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				8289C17AB006D8AF4B986B639148A600 /* UILabel+Localization.h */,
+				03BE36C06D5E71C55B45A31BD04BBA8A /* UILabel+Localization.m */,
+				5AF669C48D5670B8E38D784EB72DBBBA /* UITextField+Localization.h */,
+				99B12DCEA645BA8F1E0167BE84977226 /* UITextField+Localization.m */,
+				AA0130837F58668032CA646D5AB4472F /* UITextView+Localization.h */,
+				6A176B957F4B42DCC18B58E43008B678 /* UITextView+Localization.m */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		F2AB5F8E55C96D9C3422EE4DCEA213E5 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				5B6414E1703A6C4AF1C2E33BF5296068 /* UIBarButtonItem+Localization.h */,
+				A21673F02B005E46790BCAF9F77E2960 /* UIBarButtonItem+Localization.m */,
+				C94EF299D24AB9BD4F748DFFD4696F1E /* UIButton+Localization.h */,
+				B853A919803A581ED331168EFB05DF68 /* UIButton+Localization.m */,
+				8FF7627B8D66E40BF6D64ED2BCFD2950 /* UISegmentedControl+Localization.h */,
+				9EEFD6484E824C081EAC5F9CFB0239CB /* UISegmentedControl+Localization.m */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		218F8AC051E7783090D060143CAAD958 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73C5B13891D99E35FC76D69FE059AD6D /* LKLanguage.h in Headers */,
+				53F337CA96671607BC5E8E1ADBBF5A89 /* LKManager.h in Headers */,
+				72FB63259B2D134A6C25BB99147EF5F3 /* Loki-umbrella.h in Headers */,
+				B8A7529E2B3D84D65FBB49648798F0E5 /* Loki.h in Headers */,
+				9DFC3E5CE19389F9B569C32E66411F84 /* NSBundle+Language.h in Headers */,
+				0D0C275DB78CA1E61F88740FBC4200AF /* Swizzle.h in Headers */,
+				11A5F24424E74E772C6EF293FF2E7940 /* UIBarButtonItem+Localization.h in Headers */,
+				412A408152C82482912A035B49EEB282 /* UIButton+Localization.h in Headers */,
+				81C5D95F49F72E3611C23D2591E208F3 /* UILabel+Localization.h in Headers */,
+				4681D007606D647DC5B8F0D2E47915DF /* UISegmentedControl+Localization.h in Headers */,
+				EA2A937F3FCB4B6395F1108234C45ECE /* UITextField+Localization.h in Headers */,
+				5B434D6D8CAF26C9F3E7E8691455C8B8 /* UITextView+Localization.h in Headers */,
+				286D78F08126F56A16BD824907CB3871 /* UIView+Localization.h in Headers */,
+				85E1042B6CD0231D78788E057A57BB30 /* UIViewController+Localization.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9059F7269413CA50B2F72B4ADA61C3A7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDFCE4E00CC956F782C5FDF078C74264 /* Pods-loki_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBF8856F7979F276D6AD2C28BF64AA5F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17B0E1F8CE6710343B1CDA3CD2A6D5FC /* Pods-loki_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		74F450A91EC53247473696CA962E9280 /* Loki */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABF5A5CB1C9AF1224943C0FB9CAE4D56 /* Build configuration list for PBXNativeTarget "Loki" */;
+			buildPhases = (
+				A8F3E7819866B6448A09CCF9273576FB /* Sources */,
+				635024394519FBC247E54B0FC79963EB /* Frameworks */,
+				07835126C908FE177F25C9680CEA6F23 /* Resources */,
+				218F8AC051E7783090D060143CAAD958 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBA3A50939F68BFEC5371A98CD208F4A /* PBXTargetDependency */,
+			);
+			name = Loki;
+			productName = Loki;
+			productReference = 84DAD99F4E5D90AC8E68EBCDF711C2B4 /* Loki.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AA1FFB021ADC4B2EF2CD21C78AA440A0 /* Pods-loki_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA91784645C51DEE12135AECBB4A3B40 /* Build configuration list for PBXNativeTarget "Pods-loki_Example" */;
+			buildPhases = (
+				15DC028F06DCD4B619E73CC1775A08FF /* Sources */,
+				366986A11AEAF9A2A6FC84E533450416 /* Frameworks */,
+				9059F7269413CA50B2F72B4ADA61C3A7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F0F86A99BD0ED3F0B757BF628C9BD9B /* PBXTargetDependency */,
+			);
+			name = "Pods-loki_Example";
+			productName = "Pods-loki_Example";
+			productReference = DA4B7B17B31DA458768D35758CCA991A /* Pods_loki_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B7D0BA199566719DDF0DDE8F8FA70E69 /* Pods-loki_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6615F1AD707A7CA2D190E5F86461187 /* Build configuration list for PBXNativeTarget "Pods-loki_Tests" */;
+			buildPhases = (
+				2954A12B8A46D48F5A7E923E5D9148CE /* Sources */,
+				4E39BDCE39CC992A51A37DD557A4CB6D /* Frameworks */,
+				DBF8856F7979F276D6AD2C28BF64AA5F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BF88E14801877D06249D5902B6AFE3F /* PBXTargetDependency */,
+			);
+			name = "Pods-loki_Tests";
+			productName = "Pods-loki_Tests";
+			productReference = 4F77A4C2387C6719FFFD549189861BB0 /* Pods_loki_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CFFA9BBFAA540D6119E048D38EEE66AF /* Loki-Loki */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB2345D0888AFF860A86AD48DF3BCC03 /* Build configuration list for PBXNativeTarget "Loki-Loki" */;
+			buildPhases = (
+				80B41952F04CBF457A302C9DAA631936 /* Sources */,
+				665F1A6295B29696E4D2C0A1D04692EB /* Frameworks */,
+				E30E8F8BC52C14D96055C09757BF8A7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Loki-Loki";
+			productName = "Loki-Loki";
+			productReference = D2CB761AE51F7D09B1D4122086D1EE9C /* Loki.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 928F37E433E77E3C90608C106AD1D777 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74F450A91EC53247473696CA962E9280 /* Loki */,
+				CFFA9BBFAA540D6119E048D38EEE66AF /* Loki-Loki */,
+				AA1FFB021ADC4B2EF2CD21C78AA440A0 /* Pods-loki_Example */,
+				B7D0BA199566719DDF0DDE8F8FA70E69 /* Pods-loki_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07835126C908FE177F25C9680CEA6F23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FE77B25AAA0F40BFFCE35B14C8F901A /* Loki.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E30E8F8BC52C14D96055C09757BF8A7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15DC028F06DCD4B619E73CC1775A08FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E4F8069B0DC64DC2DD9A222E3FD9304 /* Pods-loki_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2954A12B8A46D48F5A7E923E5D9148CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89769D9D41322FF3EBA145575226C56A /* Pods-loki_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80B41952F04CBF457A302C9DAA631936 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8F3E7819866B6448A09CCF9273576FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F6B36D96474B4C98349D0B9E1EE7ED2 /* LKLanguage.m in Sources */,
+				D205132DC06AA02A55A1462705430F0C /* LKManager.m in Sources */,
+				5D4C4926D7E452160DAA090BFF9DBAF7 /* Loki-dummy.m in Sources */,
+				CD3D9116EB6AA949FCB0D1CFA19BEA5A /* NSBundle+Language.m in Sources */,
+				EE610815360E1A03D80B1DC227F73C5E /* Swizzle.m in Sources */,
+				679173EA00BED84A3609682A7FE254CD /* UIBarButtonItem+Localization.m in Sources */,
+				82F9F84D118858BB4A5336920722652F /* UIButton+Localization.m in Sources */,
+				6390748D64B6D96AE68C4AA9181596EE /* UILabel+Localization.m in Sources */,
+				281E07748719E84DCD579F2632CDEE33 /* UISegmentedControl+Localization.m in Sources */,
+				24F817BFBD5DBFA06592D7CAF6EFEE68 /* UITextField+Localization.m in Sources */,
+				99B794E914417DA1084B5282D1EB402B /* UITextView+Localization.m in Sources */,
+				761C67497281E3749D73A0C81052B34F /* UIView+Localization.m in Sources */,
+				316BA7856B10823C7123BCA3A0874B07 /* UIViewController+Localization.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F0F86A99BD0ED3F0B757BF628C9BD9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Loki;
+			target = 74F450A91EC53247473696CA962E9280 /* Loki */;
+			targetProxy = E7438444F8B61363041AD33E7EA3A6B9 /* PBXContainerItemProxy */;
+		};
+		3BF88E14801877D06249D5902B6AFE3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Loki;
+			target = 74F450A91EC53247473696CA962E9280 /* Loki */;
+			targetProxy = D08812D91130678BAAC0D4AA5D1B9A83 /* PBXContainerItemProxy */;
+		};
+		DBA3A50939F68BFEC5371A98CD208F4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Loki-Loki";
+			target = CFFA9BBFAA540D6119E048D38EEE66AF /* Loki-Loki */;
+			targetProxy = 7F3A5A39DEB11DA3D0E36BE08753ED29 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0189E2B8CA611D79080AFF257EAC1099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A19180DAC29D405A773D937B3C3654A8 /* Pods-loki_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-loki_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-loki_Example/Pods-loki_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_loki_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		03CA91998D6773EC5D02B3DB87B8353E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		38D453459D18D6BA287D3E4A3287E071 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A82BC9A792F798AA9D1E943AF92B010 /* Pods-loki_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-loki_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-loki_Example/Pods-loki_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_loki_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		92943FBA0EDA78484489EA98AC9E2EBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95839A5933501D43A349FADF02B75950 /* Loki.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Loki/Loki-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Loki/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Loki/Loki.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Loki;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		95253C0B3BCB9F4D642BCD2A2032A225 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95839A5933501D43A349FADF02B75950 /* Loki.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = Loki;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		A211D309F41924B0844CF2A43817D97C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29821115667CC2EF1928351837BF25D1 /* Pods-loki_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-loki_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-loki_Tests/Pods-loki_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_loki_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CB57C92091F03ABB8E20DC186F5D7C2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95839A5933501D43A349FADF02B75950 /* Loki.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Loki/Loki-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Loki/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Loki/Loki.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Loki;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ED329CD2DD92DA76BE9D3EECA80F7308 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A0BC0A2F66EA74155FF008FB6A58234 /* Pods-loki_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-loki_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-loki_Tests/Pods-loki_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_loki_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EE6C572B50F65A195B55C4167F1B6020 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95839A5933501D43A349FADF02B75950 /* Loki.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = Loki;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */,
+				03CA91998D6773EC5D02B3DB87B8353E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB2345D0888AFF860A86AD48DF3BCC03 /* Build configuration list for PBXNativeTarget "Loki-Loki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95253C0B3BCB9F4D642BCD2A2032A225 /* Debug */,
+				EE6C572B50F65A195B55C4167F1B6020 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABF5A5CB1C9AF1224943C0FB9CAE4D56 /* Build configuration list for PBXNativeTarget "Loki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB57C92091F03ABB8E20DC186F5D7C2B /* Debug */,
+				92943FBA0EDA78484489EA98AC9E2EBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA91784645C51DEE12135AECBB4A3B40 /* Build configuration list for PBXNativeTarget "Pods-loki_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38D453459D18D6BA287D3E4A3287E071 /* Debug */,
+				0189E2B8CA611D79080AFF257EAC1099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6615F1AD707A7CA2D190E5F86461187 /* Build configuration list for PBXNativeTarget "Pods-loki_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A211D309F41924B0844CF2A43817D97C /* Debug */,
+				ED329CD2DD92DA76BE9D3EECA80F7308 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

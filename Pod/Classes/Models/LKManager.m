@@ -160,7 +160,7 @@ NSString *LKLocalizedString(NSString *key, NSString *comment) {
     return items;
 }
 
-- (NSString *)setLocalizationSource:(NSString *)source {
+- (void)setLocalizationSource:(NSString *)source {
     NSArray *allowedSources = @[LKSourceDefault, LKSourcePlist];
     NSAssert([allowedSources containsObject:source], @"Passed source parameter that doesn't exist");
     LKSource = source;
