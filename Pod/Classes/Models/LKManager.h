@@ -20,7 +20,9 @@ NSString *LKLocalizedString(NSString *key, NSString *comment);
     NSDictionary *_vocabluary;
 }
 
+@property (nonatomic, strong) LKLanguage *defautlLanguage; // by default it is first language
 @property (nonatomic, strong) LKLanguage *currentLanguage;
+@property (nonatomic, strong, readonly) LKLanguage *deviceLanguage;
 @property (nonatomic, readonly) NSArray *languages;
 
 + (void)setLocalizationFilename:(NSString *)localizationFilename;

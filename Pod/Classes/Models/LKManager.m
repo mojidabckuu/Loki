@@ -57,11 +57,17 @@ NSString *LKLocalizedString(NSString *key, NSString *comment) {
     if(![[self languages] containsObject:language]) {
         [[self languages] addObject:language];
     }
+    if(![[LKManager sharedInstance] defautlLanguage]) {
+        [[LKManager sharedInstance] setDefautlLanguage:[[self languages] firstObject]];
+    }
 }
 
 + (void)removeLanguage:(LKLanguage *)language {
     if([[self languages] containsObject:language]) {
         [[self languages] removeObject:language];
+    }
+    if([[self languages] count] == 0) {
+        [[LKManager sharedInstance] setDefautlLanguage:nil];
     }
 }
 
@@ -77,7 +83,7 @@ NSString *LKLocalizedString(NSString *key, NSString *comment) {
 }
 
 - (NSDictionary*)setupVocabluary {
-    NSString *filePath = [[NSBundle bundleForClass:[self class]] pathForResource:LKLocalizationFilename ofType:@"plist"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:LKLocalizationFilename ofType:@"plist"];
     return [NSDictionary dictionaryWithContentsOfFile:filePath];
 }
 
@@ -98,6 +104,11 @@ NSString *LKLocalizedString(NSString *key, NSString *comment) {
     return _currentLanguage;
 }
 
+- (LKLanguage *)deviceLanguage {
+    NSString *systemLanguageCode = [[[NSLocale preferredLanguages].firstObject componentsSeparatedByString:@"-"] firstObject];
+    return [self languageByCode:systemLanguageCode];
+}
+
 #pragma mark - Modifiers
 
 - (void)setCurrentLanguage:(LKLanguage *)currentLanguage{
@@ -116,7 +127,7 @@ NSString *LKLocalizedString(NSString *key, NSString *comment) {
 
 - (LKLanguage*)languageByCode:(NSString*)code{
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"code = %@", code];
-    return [self.languages filteredArrayUsingPredicate:predicate].firstObject;
+    return [self.languages filteredArrayUsingPredicate:predicate].firstObject ?: self.defautlLanguage;
 }
 
 - (NSString *)titleForKeyPathIdentifier:(NSString *)keyPathIdentifier {

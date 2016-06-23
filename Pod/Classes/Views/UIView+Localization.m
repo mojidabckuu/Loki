@@ -12,7 +12,28 @@
 
 #import <objc/runtime.h>
 
+void LKSwizzleMethodsFrom(Class onClass, SEL fromMethod, Class fromClass, SEL toMethod) {
+    Method originalMethod = class_getInstanceMethod(onClass, fromMethod);
+    Method swizzledMethod = class_getInstanceMethod(fromClass, toMethod);
+    
+    BOOL didAddMethod = class_addMethod(onClass, fromMethod, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
+    
+    if (didAddMethod) {
+        class_replaceMethod(onClass, toMethod, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+    } else {
+        method_exchangeImplementations(originalMethod, swizzledMethod);
+    }
+}
+
 @implementation UIView (Localization)
+
+#pragma mark - Lifecycle
+
++ (void)load {
+#ifdef __IPHONE_9_0
+    LKSwizzleMethodsFrom(self, @selector(semanticContentAttribute), self, @selector(swizzledSemanticContentAttribute));
+#endif
+}
 
 #pragma mark - Accessors
 
@@ -75,6 +96,11 @@
     }
 }
 
+#pragma mark - Utils
 
-
+#ifdef __IPHONE_9_0
+- (UISemanticContentAttribute)swizzledSemanticContentAttribute {
+    return UISemanticContentAttributeForceLeftToRight;
+}
+#endif
 @end

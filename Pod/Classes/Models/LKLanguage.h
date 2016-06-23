@@ -9,11 +9,13 @@
 
 @interface LKLanguage : NSObject
 
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *code;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *code;
+@property (nonatomic, strong) NSString *title;
 
 @property (nonatomic) NSLocaleLanguageDirection direction;
 
 - (instancetype)initWithName:(NSString*)name code:(NSString*)code;
+- (instancetype)initWithName:(NSString*)name code:(NSString*)code title:(NSString *)title;
 
 @end
