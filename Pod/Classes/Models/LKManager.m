@@ -114,7 +114,7 @@ NSString *LKLocalizedString(NSString *key, NSString *comment) {
     NSAssert([allowedSources containsObject:source], @"Passed source parameter that doesn't exist");
     _source = source;
     if(_source == LKSourcePlist) {
-        [self setupVocabluary];
+        _vocabluary = [self setupVocabluary];
     }
 }
 
