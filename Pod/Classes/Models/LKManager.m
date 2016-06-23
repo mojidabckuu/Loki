@@ -83,7 +83,7 @@ NSString *LKLocalizedString(NSString *key, NSString *comment) {
 }
 
 - (NSDictionary*)setupVocabluary {
-    NSString *filePath = [[NSBundle bundleForClass:[self class]] pathForResource:LKLocalizationFilename ofType:@"plist"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:LKLocalizationFilename ofType:@"plist"];
     return [NSDictionary dictionaryWithContentsOfFile:filePath];
 }
 
