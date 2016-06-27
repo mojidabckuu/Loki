@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Testeeeeee-->
         <scene sceneID="wQg-tq-qST">
             <objects>
                 <viewController id="whP-gf-Uak" customClass="LKViewController" sceneMemberID="viewController">
@@ -18,8 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewT-7c-QW9">
-                                <rect key="frame" x="0.0" y="64" width="600" height="100"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="assignpopout2" translatesAutoresizingMaskIntoConstraints="NO" id="AqU-iu-LOU">
+                                        <rect key="frame" x="568" y="62" width="12" height="12"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isLocalized" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Td-bC-Wyl">
                                         <rect key="frame" x="20" y="20" width="100" height="22"/>
                                         <color key="backgroundColor" red="0.1764705882" green="0.59999999999999998" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -31,14 +37,19 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isLocalized" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shouldNotFlipImage" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="Zx1-YM-iBH" kind="show" id="9Ui-j0-5ne"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="1HH-M2-v7x"/>
                                     <constraint firstItem="8Td-bC-Wyl" firstAttribute="top" secondItem="ewT-7c-QW9" secondAttribute="top" constant="20" id="Iqv-hS-dyx"/>
+                                    <constraint firstItem="AqU-iu-LOU" firstAttribute="top" secondItem="8Td-bC-Wyl" secondAttribute="bottom" constant="20" id="Var-1W-LYe"/>
                                     <constraint firstItem="8Td-bC-Wyl" firstAttribute="leading" secondItem="ewT-7c-QW9" secondAttribute="leading" constant="20" id="YOz-io-NX0"/>
+                                    <constraint firstAttribute="trailing" secondItem="AqU-iu-LOU" secondAttribute="trailing" constant="20" id="bRV-IG-uDp"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isLocalized" value="YES"/>
@@ -49,10 +60,11 @@
                         <constraints>
                             <constraint firstItem="ewT-7c-QW9" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="RyM-h8-pAa"/>
                             <constraint firstItem="ewT-7c-QW9" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" id="XVU-bj-FlG"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="ewT-7c-QW9" secondAttribute="bottom" id="cFO-ET-PYg"/>
                             <constraint firstAttribute="trailing" secondItem="ewT-7c-QW9" secondAttribute="trailing" id="ond-U5-DDn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="d8T-tp-4ZJ">
+                    <navigationItem key="navigationItem" title="Testeeeeee" id="d8T-tp-4ZJ">
                         <barButtonItem key="rightBarButtonItem" title="Lng" id="X44-x9-L9J">
                             <connections>
                                 <action selector="changeLanguage:" destination="whP-gf-Uak" id="PbV-eo-pvY"/>
@@ -64,10 +76,27 @@
             </objects>
             <point key="canvasLocation" x="1117" y="433"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="KKD-pO-n5f">
+            <objects>
+                <viewController id="Zx1-YM-iBH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xUV-Rj-TQi"/>
+                        <viewControllerLayoutGuide type="bottom" id="nTe-gD-jrI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hti-4N-a9m">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mid-3B-c8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1854" y="433"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="t2v-ff-Mwk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TbX-na-sHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="809-8e-r4j" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nhn-kH-FXa">
@@ -79,6 +108,7 @@
                         <segue destination="whP-gf-Uak" kind="relationship" relationship="rootViewController" id="3aV-NM-aN0"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TbX-na-sHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="433"/>
         </scene>

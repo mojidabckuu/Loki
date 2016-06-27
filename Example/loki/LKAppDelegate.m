@@ -14,7 +14,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
     [LKManager addLanguage:[[LKLanguage alloc] initWithName:@"English" code:@"en" title:@"English"]];
     [LKManager addLanguage:[[LKLanguage alloc] initWithName:@"Arabic" code:@"ar" title:@"Arabic"]];
     
