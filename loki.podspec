@@ -18,6 +18,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
 This is a lib to rotate views according to language direction.
+If you are using iOS < 9.0 for ar applications then you need this library to perform autofip for views, iamges, controllers.
+If you support iOS 8 and greater then you need adjust the rules for built-in and custom flippings.
                        DESC
 
   s.homepage         = "https://github.com/mojidabckuu/Loki"
