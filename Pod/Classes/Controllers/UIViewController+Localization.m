@@ -8,18 +8,25 @@
 
 #import "UIViewController+Localization.h"
 
+#import "LKManager.h"
+
+@import ObjectiveC;
+
 @implementation UIViewController (Localization)
 
 #pragma mark - Accessors
 
 - (NSString *)localizedTitleKey {
-    return self.title;
+    return objc_getAssociatedObject(self, @selector(localizedTitleKey));
 }
 
 #pragma mark - Modifiers
 
 - (void)setLocalizedTitleKey:(NSString *)localizedTitleKey {
-    self.title = NSLocalizedString(localizedTitleKey, nil);
+    objc_setAssociatedObject(self, @selector(localizedTitleKey), localizedTitleKey, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    if (localizedTitleKey) {
+        self.title = LKLocalizedString(localizedTitleKey, nil);
+    }
 }
 
 @end
